@@ -1,0 +1,60 @@
+version: "3.4"
+
+services:
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpasswordxd
+      MYSQL_USER: symfony
+      MYSQL_DATABASE: symfony
+      MYSQL_PASSWORD: symfony
+
+  php:
+    build:
+      context: .
+      target: symfony_php
+      args:
+        SYMFONY_VERSION: ${SYMFONY_VERSION:-}
+        STABILITY: ${STABILITY:-stable}
+    healthcheck:
+      interval: 10s
+      timeout: 3s
+      retries: 3
+      start_period: 30s
+    depends_on:
+      - db
+    volumes:
+      - ../:/srv/app:rw,cached
+#      - /srv/app/var/
+#      - /srv/app/var/cache/
+#      - /srv/app/var/logs/
+#      - /srv/app/var/sessions/
+    environment:
+      - SYMFONY_VERSION
+
+  nginx:
+    build:
+      context: .
+      target: symfony_nginx
+    depends_on:
+      - php
+      - db
+    volumes:
+      - ./docker/nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./public:/srv/app/public:ro
+    ports:
+      - "80:80"
+
+  h2-proxy:
+    build:
+      context: .
+      target: symfony_h2-proxy
+    depends_on:
+      - nginx
+    volumes:
+      - ./docker/h2-proxy/default.conf:/etc/nginx/conf.d/default.conf:ro
+    ports:
+      - "443:443"
