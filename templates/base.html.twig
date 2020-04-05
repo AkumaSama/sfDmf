@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,7 +13,7 @@
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg navbar-light bg-danger fixed-top">
                 <!--ramene vers l'accueil.html.twig-->
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="{{ path('homepage') }}">
                     <img src="{{ asset('img/logo.png') }}" width="200" height="80" class="d-inline-block align-top" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,19 +24,19 @@
                     <ul class="navbar-nav mr-auto">
                         <!--ramene vers nous-rejoindre/nous-rejoindre.html.twig-->
                         <li class="nav-item font-weight-bold">
-                            <a class="nav-link" href="#">NOUS REJOINDRE</a>
+                            <a class="nav-link" href="{{ path('rejoindre') }}">NOUS REJOINDRE</a>
                         </li>
                         <!--ramene vers classement-familia/classement-familia.html.twig-->
                         <li class="nav-item font-weight-bold">
-                            <a class="nav-link" href="#">CLASSEMENT FAMILIA</a>
+                            <a class="nav-link" href="{{ path('classement-familia') }}">CLASSEMENT FAMILIA</a>
                         </li>
                         <!--ramene vers boutique/boutique.html.twig-->
                         <li class="nav-item font-weight-bold">
-                            <a class="nav-link" href="#">BOUTIQUE</a>
+                            <a class="nav-link" href="{{ path('shop') }}">BOUTIQUE</a>
                         </li>
                         <!--ramene vers vote/vote.html.twig-->
                         <li class="nav-item font-weight-bold">
-                            <a class="nav-link" href="#">VOTE</a>
+                            <a class="nav-link" href="{{path('vote')}}">VOTE</a>
                         </li>
                     </ul>
                 </div>
@@ -54,5 +54,5 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 		{% endblock %}
-    </body>
+    </body>-
 </html>
