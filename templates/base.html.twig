@@ -6,13 +6,13 @@
         <title>{% block title %}DMF{% endblock %}</title>
         {% block stylesheets %}
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
         {% endblock %}
     </head>
     <body>
         <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg navbar-light bg-danger fixed-top">
-                <!--ramene vers l'accueil.html.twig-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-red fixed-top">
                 <a class="navbar-brand" href="{{ path('homepage') }}">
                     <img src="{{ asset('img/logo.png') }}" width="200" height="80" class="d-inline-block align-top" alt="">
                 </a>
@@ -34,13 +34,23 @@
                             <a class="nav-link" href="{{ path('vote') }}">VOTE</a>
                         </li>
                     </ul>
-                </div>
+                    <div class="row">
+                        <div class="col">
+                            <a href="#" class="btn btn-darkred btn-sm w-50"><span class="fa fa-edit"></span> Inscription</a>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="col">
+                            <a href="#" class="btn btn-darkred btn-sm w-50"><span class="fa fa-user"></span> Connexion</a>
+                        </div>
+                    </div>
+                </div>  
             </nav>
+            <div class="row bg-darkred"></div>  
         {% block body %}
         {% endblock %}
-            <footer class="row bg-danger">
+            <footer class="row bg-red">
                 <div class="col text-center">
-                    <p class="pt-3"><span class="font-weight-bold">© 2020 DanMachi France</span>, tous droits réservés | <a href="https://discord.gg/hEpxS7X">Discord</a></p>
+                    <p class="pt-3"><span class="font-weight-bold">2020 DanMachi France</span>, tous droits réservés | <a href="https://discord.gg/hEpxS7X">Discord</a></p>
                 </div>
             </footer>
         </div>
