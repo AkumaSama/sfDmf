@@ -1,11 +1,12 @@
 .nav-link {
 	font-size: 20px;
-	transition: font-size, 0.2s;
+	transition: transform 0.2s, font-size 0.2s;
 	margin: 20px;
 }
 
 .nav-link:hover {
 	font-size: 22px;
+	transform: rotate(4deg);
 }
 
 .container {
