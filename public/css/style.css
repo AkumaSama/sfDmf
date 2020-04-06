@@ -6,10 +6,24 @@
 }
 
 .nav-link:hover {
-	/*animation: naveffect 0.5s infinite;*/
+	animation: naveffect 0.6s infinite;
 	color: white !important;
 	text-decoration: overline;
-	transform: rotate(4deg);
+}
+
+@keyframes naveffect {
+	35% {
+		transform: rotate(3deg);
+	}
+	50% {
+		transform: rotate(-3deg);
+	}
+	65%{
+		transform: rotate(3deg);
+	}
+	80% {
+		transform: rotate(-3deg);
+	}
 }
 
 .container {
