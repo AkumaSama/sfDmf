@@ -34,15 +34,13 @@
                             <a class="nav-link" href="{{ path('vote') }}">VOTE</a>
                         </li>
                     </ul>
-                    <div class="row">
-                        <div class="col">
-                            <a href="#" class="btn btn-darkred btn-sm w-50"><span class="fa fa-edit"></span> Inscription</a>
-                        </div>
-                        <div class="w-100"></div>
-                        <div class="col">
-                            <a href="#" class="btn btn-darkred btn-sm w-50"><span class="fa fa-user"></span> Connexion</a>
-                        </div>
-                    </div>
+                    <a href="#" class="btn btn-darkred"><span class="fa fa-edit"></span> Inscription</a>
+                    <a href="#" class="btn btn-darkred ml-3"><span class="fa fa-user"></span> Connexion</a>
+
+                        <!--quand l'utilisateur est connecté-->
+
+                    <!--<img class="rounded-circle img-fluid" width="90" height="90" src="{{ asset('img/test_pdp.jpg') }}" alt="profile-picture">
+                    <p class="ml-3 mt-3 p-1"><a href="">Profile</a><br>157 PB</p>-->
                 </div>  
             </nav>
             <div class="row bg-darkred"></div>  
@@ -50,7 +48,7 @@
         {% endblock %}
             <footer class="row bg-red">
                 <div class="col text-center">
-                    <p class="pt-3"><span class="font-weight-bold">2020 DanMachi France</span>, tous droits réservés | <a href="https://discord.gg/hEpxS7X">Discord</a></p>
+                    <p class="pt-3"><span class="font-weight-bold">2020 DanMachi France</span>, propriété intellectuelle | <a href="https://discord.gg/hEpxS7X">Discord</a></p>
                 </div>
             </footer>
         </div>

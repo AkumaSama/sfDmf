@@ -1,5 +1,5 @@
 .nav-link {
-	font-size: 20px;
+	font-size: 22px;
 	margin: 20px;
 	color: black !important;
 	transition: color 0.2s, transform 0.2s;
@@ -32,8 +32,4 @@
 
 .btn-darkred:hover {
 	color: white;
-}
-
-.w-100 {
-	height: 10px;
 }
