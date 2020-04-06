@@ -2,12 +2,14 @@
 	font-size: 22px;
 	margin: 20px;
 	color: black !important;
-	transition: color 0.2s, transform 0.2s;
+	transition: color 0.2s;
 }
 
 .nav-link:hover {
-	color : white !important;
-	transform: rotate(2.5deg);
+	/*animation: naveffect 0.5s infinite;*/
+	color: white !important;
+	text-decoration: overline;
+	transform: rotate(4deg);
 }
 
 .container {
