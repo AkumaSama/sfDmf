@@ -11,7 +11,7 @@
         {% endblock %}
     </head>
     <body>
-        <div class="container-md">
+        <div class="container-fluid">
             <nav class="navbar navbar-expand-lg navbar-light bg-red fixed-top">
                 <a class="navbar-brand" href="{{ path('homepage') }}">
                     <img src="{{ asset('img/logo.png') }}" width="200" height="80" class="d-inline-block align-top" alt="">
@@ -43,12 +43,21 @@
                     <p class="ml-3 mt-3 p-1"><a href="">Profile</a><br>157 PB</p>-->
                 </div>  
             </nav>
-            <div class="row bg-darkred"></div>  
+            <div class="row banner-darkred"></div> 
         {% block body %}
         {% endblock %}
-            <footer class="row bg-red">
-                <div class="col text-center">
+            <footer class="row footer text-center">
+                <div class="col-12">
                     <p class="pt-3"><span class="font-weight-bold">2020 DanMachi France</span>, propriété intellectuelle | <a href="https://discord.gg/hEpxS7X">Discord</a></p>
+                </div>
+                <div class="col">
+                    <p>oui</p>
+                </div>
+                <div class="col">
+                    <p>oui</p>
+                </div>
+                <div class="col">
+                    <p>oui</p>
                 </div>
             </footer>
         </div>
